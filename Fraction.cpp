@@ -7,12 +7,12 @@ Fraction::Fraction(int _n, int _d) :n(_n), d(_d)
 {
 	if (n == 0)
 	{
-		cout << "При чисельнику рівному 0 не можливо виконати / " << endl;
+		cout << "When the numerator is 0 it is impossible to perform /  " << endl;
 	}
 
 	if (d == 0)
 	{
-		throw "Ділення на нуль";
+		throw "Division by zero ";
 	}
 }
 
@@ -39,8 +39,8 @@ void Fraction::setD(int d)
 {
 	if (d == 0)
 	{
-		cout << "Знаменик не може дорівнювати 0" << endl;
-		cout << "Ведіть число відміне від 0 : ";
+		cout << "The denominator cannot be equal to 0 " << endl;
+		cout << "Enter a number other than 0:  ";
 		cin >> d;
 	}
 
@@ -89,6 +89,10 @@ void Fraction::simplify()
 {
 	int d2;
 	d2 = min(n, d);
+	if (n == 0)
+	{
+		d = 0;
+	}
 	for (int i = 2; i <= d2;)
 	{
 		if ((n % i == 0) && (d % i == 0))
