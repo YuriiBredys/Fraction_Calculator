@@ -1,4 +1,5 @@
 #pragma once
+using namespace std;
 
 class Fraction
 {
@@ -25,10 +26,13 @@ public:
 
 	void setD(int);
 
+	friend istream& operator>>(istream& in, Fraction& fraction);
 
-	void simplify();
+	friend ostream& operator<< (ostream& out, const Fraction& fraction);
 
 private:
 	int n;
 	int d;
+
+	void simplify();
 };
