@@ -9,7 +9,7 @@ int main()
 	cout << "Shall we start work? \nEnter y (yes) or n (no): ";
 	cin >> answer1;
 
-	if(answer1== 'n')
+	if (answer1== 'n')
 	{
 		return 0;
 	}
